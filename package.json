@@ -1,0 +1,23 @@
+{
+  "name": "pure-react",
+  "version": "1.0.0",
+  "description": "Pure React with minimal setup!",
+  "main": "index.js",
+  "author": "Harry Manchanda <IamManchanda>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.html"
+  },
+  "devDependencies": {
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.0",
+    "parcel-bundler": "^1.9.7"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.4.2"
+  }
+}
