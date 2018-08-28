@@ -766,6 +766,10 @@ brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
 
+browser-jsonp@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/browser-jsonp/-/browser-jsonp-1.1.5.tgz#2863c8d9328997ba4163bc2fa4b4db66f6f7479d"
+
 browserify-aes@^1.0.0, browserify-aes@^1.0.4:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/browserify-aes/-/browserify-aes-1.2.0.tgz#326734642f403dabc3003209853bb70ad428ef48"
@@ -2481,6 +2485,10 @@ is-glob@^4.0.0:
   dependencies:
     is-extglob "^2.1.1"
 
+is-node@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/is-node/-/is-node-1.0.2.tgz#d7d002745ef7debbb7477e988956ab0a4fccb653"
+
 is-number@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-3.0.0.tgz#24fd6201a4782cf50561c810276afc7d12d71195"
@@ -3349,6 +3357,14 @@ pbkdf2@^3.0.3:
     ripemd160 "^2.0.1"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+petfinder-client@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/petfinder-client/-/petfinder-client-0.0.3.tgz#ba0a5ef3563a6f8f4f6f979b0124b641f8b98461"
+  dependencies:
+    browser-jsonp "^1.1.5"
+    is-node "^1.0.2"
+    url "^0.11.0"
 
 physical-cpu-count@^2.0.0:
   version "2.0.0"
