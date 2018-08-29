@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import petfinderClient from 'petfinder-client';
-import Pet from './components/pet';
+import Pet from '../components/pet';
 
 const petfinder = petfinderClient({
   key: process.env.API_KEY,
