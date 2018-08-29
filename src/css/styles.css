@@ -7,16 +7,20 @@ body {
   background-color: #ddaadd;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 1rem 2rem;
+  padding: 2rem 1rem;
+}
+
+.loading {
+  padding-left: 20px;
 }
 
 .search,
 .details,
 .search-params {
-  background-color: #c4b2bc;
+  background-color: #decade;
   width: 95%;
   margin: 0 auto;
-  padding: 15px;
+  padding: 5px 25px;
   border-radius: 5px;
 }
 
@@ -56,6 +60,7 @@ body {
   width: 100%;
   overflow: hidden;
   margin: 0;
+  text-decoration: underline;
 }
 
 .pet h2 {
@@ -66,9 +71,9 @@ body {
 }
 
 header a {
-  color: #f2af29;
+  color: #B000B5;
   font-size: 50px;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: bold;
   display: block;
 }

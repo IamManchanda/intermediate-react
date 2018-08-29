@@ -31,6 +31,7 @@ module.exports = {
     'no-empty': 0,
     'no-empty-function': 0,
     'no-useless-return': 0,
+    'no-unused-vars': 0,
     'prefer-const': 0,
     'global-require': 0,
     'react/prop-types': 0,
