@@ -4,6 +4,7 @@ import { Router, Link } from '@reach/router';
 import Results from './pages/results';
 import Details from './pages/details';
 
+/* 00:32:00 */
 const App = () => (
   <div>
     <header>
