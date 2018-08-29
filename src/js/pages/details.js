@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { navigate } from '@reach/router';
 import petfinder from '../utils/petfinder';
+import Carousel from '../components/carousel';
 
 export default class Details extends Component {
   state = {
@@ -30,7 +31,7 @@ export default class Details extends Component {
   }
 
   render() {
-    const { name, animal, breed, location, description, loading } = this.state;
+    const { name, animal, breed, location, description, loading, media } = this.state;
     if (loading) return <h1 className="loading">Loading...</h1>;
     return (
       <div className="details">
@@ -39,6 +40,7 @@ export default class Details extends Component {
           <h2>{ `${animal} -- ${breed} -- ${location}` }</h2>
           <p>{ description }</p>
         </div>
+        <Carousel media={ media } />
       </div>
     );
   }

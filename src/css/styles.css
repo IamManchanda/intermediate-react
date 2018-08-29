@@ -100,6 +100,7 @@ header {
   justify-content: space-around;
   align-items: center;
   height: 400px;
+  margin: 20px 0;
 }
 
 .carousel > img {
