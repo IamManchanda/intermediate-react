@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Pet from '../components/pet';
 import petfinder from '../utils/petfinder';
 
-class Results extends Component {
+export default class Results extends Component {
   state = {
     pets: [],
   };
@@ -47,5 +47,3 @@ class Results extends Component {
     );
   }
 }
-
-export default Results;

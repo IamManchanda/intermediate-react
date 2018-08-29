@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { navigate } from '@reach/router';
 import petfinder from '../utils/petfinder';
 
-class Details extends Component {
+export default class Details extends Component {
   state = {
     loading: true,
   };
@@ -43,5 +43,3 @@ class Details extends Component {
     );
   }
 }
-
-export default Details;
