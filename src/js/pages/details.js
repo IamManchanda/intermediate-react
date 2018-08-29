@@ -3,12 +3,9 @@ import { navigate } from '@reach/router';
 import petfinder from '../utils/petfinder';
 
 class Details extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true,
-    };
-  }
+  state = {
+    loading: true,
+  };
 
   componentDidMount() {
     const { id } = this.props;

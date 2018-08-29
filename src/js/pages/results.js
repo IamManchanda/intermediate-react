@@ -3,12 +3,9 @@ import Pet from '../components/pet';
 import petfinder from '../utils/petfinder';
 
 class Results extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      pets: [],
-    };
-  }
+  state = {
+    pets: [],
+  };
 
   componentDidMount() {
     petfinder.pet
