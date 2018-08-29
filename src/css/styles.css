@@ -30,7 +30,7 @@ body {
 
 .pet img {
   width: 100px;
-  min-height: 100px;
+  height: 75px;
 }
 
 .info {
@@ -42,11 +42,11 @@ body {
 }
 
 .image-container {
-  clip-path: circle(50% at 50% 50%);
   width: 100px;
-  height: 100px;
+  height: 150px;
   float: left;
   margin-right: 20px;
+  margin-top: 15px;
 }
 
 .pet h1 {

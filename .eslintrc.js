@@ -23,6 +23,7 @@ module.exports = {
     'brace-style': 0,
     'space-in-parens': 0,
     'template-curly-spacing': 0,
+    'object-curly-newline': 0,
     'no-trailing-spaces': 0,
     'no-unused-expressions': 0,
     'no-param-reassign': 0,

@@ -38,12 +38,19 @@ class App extends Component {
         <h1>Adopt Pets</h1>
         <div>
           { pets.map((pet) => {
-            const { name, animal, id } = pet;
+            const { name, animal, id, media, contact } = pet;
             let breed;
             if (Array.isArray(pet.breeds.breed)) breed = pet.breeds.breed.join(', ');
             else ({ breed } = pet.breeds);
             return (
-              <Pet key={ id } name={ name } animal={ animal } breed={ breed } />
+              <Pet 
+                key={ id } 
+                name={ name } 
+                animal={ animal } 
+                breed={ breed }
+                media={ media }
+                location={ `${contact.city}, ${contact.state}` }
+              />
             );
           }) }
         </div>
