@@ -5,7 +5,7 @@ import Results from './pages/results';
 import Details from './pages/details';
 import SearchParams from './pages/search-params';
 
-/* 00:32:00 */
+/* 3:26:00 */
 const App = () => (
   <div>
     <header>
