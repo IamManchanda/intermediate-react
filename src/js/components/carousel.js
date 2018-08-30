@@ -1,3 +1,8 @@
+/* Fix these A11y issue soon */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
+
 import React, { Component } from 'react';
 
 export default class Carousel extends Component {
@@ -15,9 +20,7 @@ export default class Carousel extends Component {
   }
 
   handleIndexClick = (event) => {
-    this.setState({
-      active: Number(event.target.dataset.index),
-    });
+    this.setState({ active: Number(event.target.dataset.index) });
   }
 
   render() {
@@ -27,9 +30,6 @@ export default class Carousel extends Component {
         <img src={ photos[active].value } alt="Primary Animal" />
         <div className="carousel-smaller">
           { photos.map((photo, index) => (
-            /* eslint-disable jsx-a11y/click-events-have-key-events */
-            /* eslint-disable jsx-a11y/interactive-supports-focus */
-            /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
             <img
               onClick={ this.handleIndexClick } 
               role="button"
@@ -39,7 +39,6 @@ export default class Carousel extends Component {
               alt="Animal thumbnail" 
               className={ index === active ? 'active' : '' }
             />
-            /* eslint-enable */ /* Fix these A11y issue soon */
           )) }
         </div>
       </div>

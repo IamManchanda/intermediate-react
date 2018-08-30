@@ -130,6 +130,8 @@ header {
 .search-params label {
   display: block;
   width: 60px;
+  margin-top: 20px;
+  margin-bottom: 3px;
 }
 
 .search-params input,
