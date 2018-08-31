@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react';
 
-export default class Carousel extends Component {
+export default class PetImages extends Component {
   state = {
     photos: [],
     active: 0,
