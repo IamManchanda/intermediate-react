@@ -39,7 +39,7 @@ export default class Details extends Component {
 
   render() {
     const { name, animal, breed, location, description, loading, media, showModal } = this.state;
-    if (loading) return <h1 className="loading">Loading...</h1>;
+    if (loading) return <h2 className="loading">Loading the data...</h2>;
 
     return (
       <div className="details">
@@ -53,7 +53,7 @@ export default class Details extends Component {
           { showModal ? <AdoptPetModal 
             name={ name } 
             toggleModal={ this.toggleModal } 
-          /> : undefined }
+          /> : null }
         </div>
         <PetImages media={ media } />
       </div>

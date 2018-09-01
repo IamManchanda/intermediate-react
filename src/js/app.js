@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Router } from '@reach/router';
+import Loadable from 'react-loadable';
 import { Provider as SearchContextProvider } from './store/search-context';
 import petfinder from './utils/petfinder';
-import Results from './pages/results';
-import Details from './pages/details';
-import Search from './pages/search';
 import Navbar from './components/navbar';
 
+/* Grab App Root */
 const appRoot = document.getElementById('app');
+
+/* Code Splitting and Page Loading only when required */
+const loadingContent = <h1>Loading the Page...</h1>;
+const LoadableResults = Loadable({
+  loader: () => import('./pages/results'),
+  loading: () => loadingContent,
+});
+const LoadableDetails = Loadable({
+  loader: () => import('./pages/details'),
+  loading: () => loadingContent,
+});
+const LoadableSearch = Loadable({
+  loader: () => import('./pages/search'),
+  loading: () => loadingContent,
+});
 
 class App extends Component {
   constructor(props) {
@@ -60,9 +74,9 @@ class App extends Component {
         <Navbar />
         <SearchContextProvider value={ this.state }>
           <Router>
-            <Results path="/" />
-            <Details path="/details/:id" />
-            <Search path="/search" />
+            <LoadableResults path="/" />
+            <LoadableDetails path="/details/:id" />
+            <LoadableSearch path="/search" />
           </Router>
         </SearchContextProvider>
       </React.Fragment>
