@@ -10,7 +10,6 @@ import Navbar from './components/navbar';
 
 const appRoot = document.getElementById('app');
 
-/* 7:33:00 */
 class App extends Component {
   constructor(props) {
     super(props);
