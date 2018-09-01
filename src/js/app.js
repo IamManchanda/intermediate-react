@@ -24,6 +24,7 @@ const LoadableSearch = Loadable({
   loading: () => loadingContent,
 });
 
+/* 3:57:30 - window doesn't exist node */
 class App extends Component {
   constructor(props) {
     super(props);
