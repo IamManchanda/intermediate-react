@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { Router, Link } from '@reach/router';
+import { Router } from '@reach/router';
 import { Provider as SearchContextProvider } from './store/search-context';
 import petfinder from './utils/petfinder';
 import Results from './pages/results';
 import Details from './pages/details';
 import Search from './pages/search';
+import Navbar from './components/navbar';
 
 const appRoot = document.getElementById('app');
 
-/* 6:17:00 */
+/* 7:33:00 */
 class App extends Component {
   constructor(props) {
     super(props);
@@ -57,16 +58,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <header>
-          <Link to="/">
-            Adopt Pets!
-          </Link>
-          <Link to="/search" className="search-link">
-            <span aria-label="search" role="img">
-              🔍
-            </span>
-          </Link>
-        </header>
+        <Navbar />
         <SearchContextProvider value={ this.state }>
           <Router>
             <Results path="/" />
