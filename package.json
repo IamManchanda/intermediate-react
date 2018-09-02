@@ -6,7 +6,10 @@
   "author": "Harry Manchanda <IamManchanda>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "build": "parcel build --public-url ./dist/ src/index.html",
+    "start": "babel-node server.js",
+    "prod": "yarn run build && yarn run start"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -23,7 +26,9 @@
   },
   "dependencies": {
     "@reach/router": "^1.1.1",
+    "babel-cli": "^6.26.0",
     "emotion": "^9.2.8",
+    "express": "^4.16.3",
     "petfinder-client": "^0.0.3",
     "react": "15.x || 16.x || 16.4.0-alpha.0911da3",
     "react-dom": "15.x || 16.x || 16.4.0-alpha.0911da3",

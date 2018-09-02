@@ -1,31 +1,13 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import { Router } from '@reach/router';
-import Loadable from 'react-loadable';
 import { Provider as SearchContextProvider } from './store/search-context';
 import petfinder from './utils/petfinder';
 import Navbar from './components/navbar';
+import Results from './pages/results';
+import Details from './pages/details';
+import Search from './pages/search';
 
-/* Grab App Root */
-const appRoot = document.getElementById('app');
-
-/* Code Splitting and Page Loading only when required */
-const loadingContent = <h1>Loading the Page...</h1>;
-const LoadableResults = Loadable({
-  loader: () => import('./pages/results'),
-  loading: () => loadingContent,
-});
-const LoadableDetails = Loadable({
-  loader: () => import('./pages/details'),
-  loading: () => loadingContent,
-});
-const LoadableSearch = Loadable({
-  loader: () => import('./pages/search'),
-  loading: () => loadingContent,
-});
-
-/* 3:57:30 - window doesn't exist node */
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
 
@@ -75,14 +57,12 @@ class App extends Component {
         <Navbar />
         <SearchContextProvider value={ this.state }>
           <Router>
-            <LoadableResults path="/" />
-            <LoadableDetails path="/details/:id" />
-            <LoadableSearch path="/search" />
+            <Results path="/" />
+            <Details path="/details/:id" />
+            <Search path="/search" />
           </Router>
         </SearchContextProvider>
       </React.Fragment>
     );
   }
 }
-
-render(<App />, appRoot);
