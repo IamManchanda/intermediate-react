@@ -39,23 +39,28 @@ export default class Details extends Component {
 
   render() {
     const { name, animal, breed, location, description, loading, media, showModal } = this.state;
-    if (loading) return <h2 className="loading">Loading the data...</h2>;
 
     return (
       <div className="details">
-        <div>
-          <h1>{ name }</h1>
-          <h2>{ `${animal} -- ${breed} -- ${location}` }</h2>
-          <button type="button" onClick={ this.toggleModal }>
-            Adopt { name }
-          </button>
-          <p>{ description }</p>
-          { showModal ? <AdoptPetModal 
-            name={ name } 
-            toggleModal={ this.toggleModal } 
-          /> : null }
-        </div>
-        <PetImages media={ media } />
+        { loading ? (
+          <h2 className="loading">Loading the data...</h2>
+        ) : (
+          <React.Fragment>
+            <div>
+              <h1>{ name }</h1>
+              <h2>{ `${animal} -- ${breed} -- ${location}` }</h2>
+              <button type="button" onClick={ this.toggleModal }>
+                Adopt { name }
+              </button>
+              <p>{ description }</p>
+              { showModal ? <AdoptPetModal 
+                name={ name } 
+                toggleModal={ this.toggleModal } 
+              /> : null }
+            </div>
+            <PetImages media={ media } />
+          </React.Fragment>
+        ) }
       </div>
     );
   }
